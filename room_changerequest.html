@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Change Request</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            background-image: url("http://milgrasp.com/img/sections/features/hostel_management1.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .change-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #333;
+            font-weight: bold;
+        }
+
+        select, input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            padding: 10px 20px;
+            /* background-color: #333; */
+            background-color: #3897f0;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="change-form">
+        <h1>Room Change Request</h1>
+        <form method="post" action="submit.php">
+            <div class="form-group">
+                <label for="studentid">studentid:</label>
+                <input type="int" id="studentid" name="studentid" required>
+            </div>
+            <div class="form-group">
+                <label for="studentname">studentname:</label>
+                <input type="text" id="studentname" name="studentname" required>
+            </div>
+            <div class="form-group">
+                <label for="currentRoom">Current Room:</label>
+                <input type="text" id="currentRoom" name="currentRoom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="desiredRoom">Desired Room:</label>
+                <input type="text" id="desiredRoom" name="desiredRoom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reason">Reason for Change:</label>
+                <textarea id="reason" name="reason" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>

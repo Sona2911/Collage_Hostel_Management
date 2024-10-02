@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+     
+    <title>Complaints</title>
+    <style>
+   
+        body {
+            font-family: Arial, sans-serif;
+             background-image: url("http://milgrasp.com/img/sections/features/hostel_management1.jpg");
+             width: 100%;
+              height:100px;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        form {
+            margin: 20px 0;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            /* background-color: #333;
+             */
+             background-color: #3897f0;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Complaints</h1>
+    </header>
+    <div class="container">
+        <h2>Make a Complaints</h2>
+        <form action="process_complaints.php" method="post">
+            <label for="Problem">Problem:</label>
+            <input type="text" id="cccc" name="Problem" required>
+
+            <label for="Description">Message:</label>
+            <textarea id="Description" name="Description" rows="4" required></textarea>
+           
+            <label for="Date">Date:</label>
+            <label for="complaintDate">Complaint Date:</label>
+<input type="date" id="complaintDate" name="complaintDate">
+
+
+            <input type="submit" value="Submit">
+        </form>
+
+       
+       
+    </div>
+</body>
+</html>
+

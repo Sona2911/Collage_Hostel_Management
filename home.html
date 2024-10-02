@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hostel Management System</title>
+    <!-- Add Swiper CSS -->
+    <link rel="stylesheet" href="style3.css" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <!-- Add Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="body">
+        <h1>Welcome to Deogiri Hostel Management System</h1>
+    </div>
+</header>
+<div class="header">
+    <img src="images/hostel.png" style="width: 3%; height: 3%;">
+    <a href="#default" class="logo">Sharadabai Girls Hostel</a>
+    <div class="header-right">
+        <a class="active" href="home.html">Home</a>
+        <a href="Register.html">Register</a>
+        <a href="Facilities.html">Facilities</a>
+    </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/image11.jpg" alt="Image 1">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/image22.jpg" alt="Image 2">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/image33.jpg" alt="Image 3">
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000, // 3 seconds between slides
+            },
+        });
+    </script>
+
+    <!-- <div class="copyright">
+        &copy; 2023 <a href="https://www.example.com">MyWebsite</a>. All rights reserved.
+    </div> -->
+</body>
+</html>

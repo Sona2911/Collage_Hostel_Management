@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fees Management</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            background-image: url("http://milgrasp.com/img/sections/features/hostel_management1.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .fees-management-form {
+            max-width: 600px;
+            margin: 20px auto;
+             background-color: #fff; 
+
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            /* background-color: #333; */
+            background-color: #3897f0;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="fees-management-form">
+        <h1>Fees Management</h1>
+        <form method="post" action="process_fees.php">
+            <label for="studentID">Student ID:</label>
+            <input type="text" id="studentID" name="studentID" required>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="btech">B.Tech</option>
+                <option value="bcom">B.Com</option>
+                <option value="bsc">BSc</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="amount">Payment Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <button type="submit">Pay Fees</button>
+        </form>
+    </div>
+</body>
+</html>
+

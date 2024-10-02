@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Notice Board</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            background-image: url("http://milgrasp.com/img/sections/features/hostel_management1.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .admin-notice-board {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            /* background-color: #333; */
+            background-color: #3897f0;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-notice-board">
+        <h1>Admin Notice Board</h1>
+        <form  method="post" action="post1_notice.php">
+            <label for="notice-title">Notice Title:</label>
+            <input type="text" id="notice-title" name="notice-title" required>
+            
+            <label for="notice-date">Notice Date:</label>
+            <input type="date" id="notice-date" name="notice-date" required>
+            
+            <label for="notice-content">Notice Content:</label>
+            <textarea id="notice-content" name="notice-content" rows="5" required></textarea>
+
+            <button type="submit">Post Notice</button>
+        </form>
+    </div>
+</body>
+</html>
+

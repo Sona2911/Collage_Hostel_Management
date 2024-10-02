@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            /* background-image: url(images/deo2.jpg); */
+            background-image: url("http://milgrasp.com/img/sections/features/hostel_management1.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200vh;
+            
+        }
+
+        .registration-form {
+            width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #333;
+            font-weight: bold;
+        }
+
+        select, input[type="text"], input[type="password"], input[type="date"], input[type="email"], textarea, input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        input[type="radio"] {
+            margin-top: 5px;
+        }
+
+        button {
+            display: block;
+            padding: 10px 20px;
+            /* background-color: #333; */
+            background-color: #3897f0;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-form">
+        <h1>Student Registration</h1>
+        <form method="post" action="process_registration1.php">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="studentID">Student ID:</label>
+                <input type="text" id="studentID" name="studentID" required>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Qualification:</label>
+                <label>
+                    <input type="radio" name="qualification" value="B.Tech" required> B.Tech
+                </label>
+                <label>
+                    <input type="radio" name="qualification" value="B.Com" required> B.Com
+                </label>
+                <label>
+                    <input type="radio" name="qualification" value="BSC" required> BSc
+                </label>
+                <label>
+                    <input type="radio" name="qualification" value="BCA" required> BCA
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="courses">Current Courses:</label>
+                <textarea id="courses" name="courses" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="number" id="contact" name="contact" required>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
